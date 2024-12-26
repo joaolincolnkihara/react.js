@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Banner from './componente/Banner/Banner'
-import CampoTexto from './componente/CampoTexto'
+import Formulario from './componente/Formulario'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Banner/>
-      <CampoTexto/>
+      <Formulario/>
     </>
   )
 }
