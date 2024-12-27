@@ -1,0 +1,18 @@
+.contain{
+    padding: 0 50px 0 50px;
+
+}
+
+.botao{
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: #6278F7;
+    padding: 24px;
+    border: none;
+    margin: 32px 0;
+}
+
+.botao:hover{
+    color: #95ffd4;
+}
