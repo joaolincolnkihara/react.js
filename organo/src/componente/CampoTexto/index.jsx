@@ -1,6 +1,7 @@
 import "./CampoTexto.css"
 
 function CampoTexto(props){
+    
     const aoDigitado = (evento) =>{
         console.log(evento.target.value) //Pega o valor que esta sendo digitado
     }
