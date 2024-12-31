@@ -4,7 +4,7 @@ import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 
-function Formulario(){
+function Formulario(props){
     const times = [
         'Programação',
         'Front-End',
@@ -22,7 +22,16 @@ function Formulario(){
 
     const aoSalvar = (evento) =>{    
         evento.preventDefault() //Tira os comportamentos padrões do navegador(nesse caso não recarrega a pagina ao clicar no botão)
-        console.log('form foi submetido', nome, cargo, imagem, time)
+        props.aoColaboradorCadastrado({
+            // nome:nome,
+            // cargo:cargo,
+            // imagem:imagem,
+            // time:time
+            nome,
+            cargo,
+            imagem,
+            time
+        })
     }
 
     return(

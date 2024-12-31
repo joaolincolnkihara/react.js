@@ -1,0 +1,12 @@
+.time{
+    text-align: center;
+    padding: 32px;
+
+}
+
+.time h3{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 4px solid ;
+    /* font-size: 32px; */
+}
