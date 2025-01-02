@@ -8,5 +8,11 @@
     color: black;
     font-family: 'Times New Roman', Times, serif;
     border-bottom: 4px solid ;
-    /* font-size: 32px; */
+}
+
+.time .colaboradores{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 32px;
 }
