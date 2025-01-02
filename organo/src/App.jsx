@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Banner from './componente/Banner/Banner'
 import Formulario from './componente/Formulario'
 import Time from './componente/Time'
+import Rodape from './componente/Rodape'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -65,6 +66,7 @@ function App() {
         corSecundaria={time.corSecundaria} 
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
         />)}
+        <Rodape/>
     </>
   )
 }

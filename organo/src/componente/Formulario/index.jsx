@@ -21,8 +21,12 @@ function Formulario(props){
             nome,
             cargo,
             imagem,
-            time
+            time,
         })
+            setCargo(''),
+            setImagem(''),
+            setNome(''),
+            setTime('')
     }
 
     return(
