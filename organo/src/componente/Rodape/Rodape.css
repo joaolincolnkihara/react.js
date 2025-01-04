@@ -3,6 +3,15 @@ footer{
     justify-content: space-around;
     align-items: center;
     background-color: #6278F7;
+    height: 233px;
+    background-image: url(../../../public/imagens/fundo.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.redes img{
+    margin: 10px;
+    width: 35px;
 }
 
 .desenvolvido{
