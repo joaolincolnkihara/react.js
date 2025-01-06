@@ -3,7 +3,7 @@ import './CampoTexto.css'
 const CampoTexto = (props) =>{
 
     const aoDigitado = (evento) =>{
-        props.aoClicar(evento.target.value)
+        props.aoClicar(evento.target.value) //para pegar o valor do input
     }
     return(
 
@@ -13,7 +13,7 @@ const CampoTexto = (props) =>{
                 type="text" 
                 placeholder={props.placeholder}
                 value = {props.valor}
-                onChange={aoDigitado}
+                onChange={aoDigitado} //pega os valores que estao sendo digitados no input
             />
         </div>
     )
