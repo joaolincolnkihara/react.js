@@ -5,7 +5,10 @@ const Colaborador = ({nome, imagem, cargo, corDeFundo, aoDeletar}) =>{
     return(
         <div className="colaborador">
             <div className="cabecalho" style={{backgroundColor: corDeFundo}}>
-                <IoMdCloseCircle size={25} className="deletar" onClick={aoDeletar}/>
+                <IoMdCloseCircle 
+                    size={25} 
+                    className="deletar" 
+                    onClick={() => aoDeletar(Colaborador.id)}/>
                 <img src={imagem} alt={nome} />
             </div>
             <div className="rodape">

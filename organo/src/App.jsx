@@ -52,8 +52,8 @@ function App() {
     }
   ])
 
-    function deletarColaborador(){
-      console.log('Deletando colaborador')
+    function deletarColaborador(id){
+      setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id))
     }
 
     const mudarCorDoTime = (cor, id) =>{
@@ -65,10 +65,15 @@ function App() {
       }))
     }
 
+    function cadastrarTime(novoTime){
+      setTimes([...times, {...novoTime, id: uuidv4()}])
+    }
+
   return (
     <>
       <Banner/>
       <Formulario 
+      cadastrarTime={cadastrarTime}
       times = {times.map(times => times.nome)}//Traz a lista de times (times =>times.nome) = times vai retornar times.nome
       aoColaboradorCadastrado={colaborador => aoNovoColaboradorCadastrado(colaborador)}
       />
