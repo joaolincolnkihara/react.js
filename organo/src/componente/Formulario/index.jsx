@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Botao from '../Botao'
-import CampoTexto from '../CampoTexto'
+import CampoTexto from '../Campo'
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 
@@ -80,6 +80,7 @@ function Formulario({aoColaboradorCadastrado, times, cadastrarTime}){
                 />
                 <CampoTexto 
                     obrigatorio
+                    type='color'
                     label='Cor' 
                     placeholder='Selecione a cor do time'
                     valor={corTime}

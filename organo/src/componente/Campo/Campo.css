@@ -15,9 +15,15 @@ form label{
 input{
     background-color: #FFF;
     padding: 24px;
+    width: 100%;
     border-radius: 10px;
     border: none;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
     font-size: 16px;
     color: black;
+    box-sizing: border-box;
+}
+
+.container-color input{
+    padding: 5px 24px;
 }
