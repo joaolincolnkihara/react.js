@@ -1,10 +1,10 @@
 import { useState } from "react"
 import "./Campo.css"
 
-function Campo({type="text" ,label, obrigatorio, placeholder, valor}){
+function Campo({type="text" ,label, obrigatorio, placeholder, valor, aoAlterado}){
     
     const aoDigitado = (evento) =>{
-        props.aoAlterado(evento.target.value)
+        aoAlterado(evento.target.value)
     }
 
     return(
