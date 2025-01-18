@@ -4,6 +4,7 @@ import Formulario from './componente/Formulario'
 import Time from './componente/Time'
 import Rodape from './componente/Rodape'
 import { v4 as uuidv4 } from 'uuid';
+import Colaborador from './componente/Colaborador'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,36 +18,43 @@ function App() {
   const [times, setTimes] = useState([
     {
       id: uuidv4(),
+      favorito: false,
       nome:'Programação',
       cor:'#57C278',
     },
     {
       id: uuidv4(),
+      favorito: false,
       nome:'Front-End',
       cor:'#82CFFA',
     },
     {
       id: uuidv4(),
+      favorito: false,
       nome:'Data Science',
       cor:'#A6D157',
     },
     {
       id: uuidv4(),
+      favorito: false,
       nome:'Develops',
       cor:'#E06B69',
     },
     {
       id: uuidv4(),
+      favorito: false,
       nome:'UX e Design',
       cor:'#DB6EBF',
     },
     {
       id: uuidv4(),
+      favorito: false,
       nome:'Mobile',
       cor:'#FFBA05',
     },
     {
       id: uuidv4(),
+      favorito: false,
       nome:'Innovação e Gestão',
       cor:'#FF8A29',
     }
@@ -64,6 +72,13 @@ function App() {
           return time;
       }))
     }
+    
+    function resolverFavorito(id) {
+      setColaboradores(colaboradores.map(colaborador => {
+        if(colaborador.id === id) colaborador.favorito = !colaborador.favorito;
+        return colaborador;
+      }))
+    }
 
     function cadastrarTime(novoTime){
       setTimes([...times, {...novoTime, id: uuidv4()}])
@@ -79,6 +94,7 @@ function App() {
       />
       {times.map(time => 
       <Time 
+        aoFavorita={resolverFavorito}
         mudarCor={mudarCorDoTime}
         key={time.nome} 
         nome={time.nome} 
