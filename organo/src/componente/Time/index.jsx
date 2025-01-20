@@ -19,6 +19,7 @@ const Time = (props) => {
                     imagem={colaborador.imagem}
                     key={colaborador.nome}
                     aoDeletar={props.aoDeletar}
+                    aoFavoritar={props.aoFavoritar}
                 />})}
             </div>
         </section>

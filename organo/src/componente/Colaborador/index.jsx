@@ -1,7 +1,16 @@
-import { IoMdCloseCircle } from "react-icons/io";
+import { IoMdCloseCircle, IoMdHeart, IoMdHeartEmpty  } from "react-icons/io";
 import './Colaborador.css'
 
-const Colaborador = ({nome, imagem, cargo, corDeFundo, aoDeletar}) =>{
+const Colaborador = ({nome, imagem, cargo, corDeFundo, aoDeletar, colaborador, aoFavoritar}) =>{
+    function favoritar(){
+        aoFavoritar(colaborador.id)
+    }
+
+    const propsfavorito = {
+        size: 25,
+        onclick: favoritar
+    }
+
     return(
         <div className="colaborador">
             <div className="cabecalho" style={{backgroundColor: corDeFundo}}>
@@ -15,6 +24,9 @@ const Colaborador = ({nome, imagem, cargo, corDeFundo, aoDeletar}) =>{
                 <h4>{nome}</h4>
                 <h5>{cargo}</h5>
             </div> 
+            <div className='favoritar'>
+                {colaborador.favorito ? <IoMdHeart {...propsfavorito} color="#ff0000"/> : <IoMdHeartEmpty {...propsfavorito}/>}
+            </div>
         </div>
     )
 }
