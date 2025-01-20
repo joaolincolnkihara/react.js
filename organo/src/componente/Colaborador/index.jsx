@@ -8,7 +8,7 @@ const Colaborador = ({nome, imagem, cargo, corDeFundo, aoDeletar, colaborador, a
 
     const propsfavorito = {
         size: 25,
-        onclick: favoritar
+        onClick: favoritar
     }
 
     return(
@@ -23,10 +23,12 @@ const Colaborador = ({nome, imagem, cargo, corDeFundo, aoDeletar, colaborador, a
             <div className="rodape">
                 <h4>{nome}</h4>
                 <h5>{cargo}</h5>
+                <div className='favoritar'>
+                {colaborador?.favorito 
+                    ? <IoMdHeart {...propsfavorito} color="#ff0000"/> 
+                    : <IoMdHeartEmpty {...propsfavorito}/>}
+                </div>
             </div> 
-            <div className='favoritar'>
-                {colaborador.favorito ? <IoMdHeart {...propsfavorito} color="#ff0000"/> : <IoMdHeartEmpty {...propsfavorito}/>}
-            </div>
         </div>
     )
 }
