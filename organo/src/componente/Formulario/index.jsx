@@ -31,8 +31,11 @@ function Formulario({aoColaboradorCadastrado, times, cadastrarTime}){
             setTime('')
     }
 
+    const [esconder, setEsconder] = useState('')
+
     return(
-        <section className='formulario'>
+        <>
+        <section id='formulario'>
             <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card do colaborador.</h2>
                 <Campo 
@@ -91,6 +94,8 @@ function Formulario({aoColaboradorCadastrado, times, cadastrarTime}){
                 </Botao>
             </form>
         </section>
+        <img src="public/imagens/Botão add-01 1.png" alt="" onClick={setEsconder}/>
+        </>
     )
 }
 
