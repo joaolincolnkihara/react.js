@@ -2,7 +2,6 @@ import { Link, useLocation } from 'react-router'
 import styles from './MenuLink.module.css'
 
 function MenuLink( {children ,to} ){
-    
     //o useLocation funciona como o 'window.location' que serve para pegar informações como pathname
     const localizacao = useLocation()
 
