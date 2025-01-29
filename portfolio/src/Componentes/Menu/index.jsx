@@ -1,15 +1,16 @@
 import styles from './Menu.module.css'
+import MenuLink from '../MenuLink'
 
 function Menu(){
     return(
         <header>
             <nav className={styles.navegacao}>
-                <a className={styles.link} href="/">
-                Início
-                </a>
-                <a className={styles.link} href="/sobremim">
-                Sobre mim
-                </a>
+                <MenuLink to='/'>
+                    Início
+                </MenuLink>
+                <MenuLink to='/sobremim'>
+                    Sobre mim
+                </MenuLink>
             </nav>
         </header>
     )

@@ -4,8 +4,11 @@ import SobreMim from './paginas/SobreMim'
 import Menu from './Componentes/Menu'
 import { BrowserRouter, Routes, Route } from 'react-router'
 
-function App() {
+function AppRoutes() {
   return (
+    // link para ReactRouter: https://reactrouter.com/start/library/installation
+
+
     <BrowserRouter>
       <Menu/>
       <Routes>
@@ -17,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppRoutes;
