@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router'
 import styles from './Post.module.css'
 
 function Post({post}){
