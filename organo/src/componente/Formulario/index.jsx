@@ -11,7 +11,7 @@ function Formulario({aoColaboradorCadastrado, times, cadastrarTime}){
     const[imagem, setImagem] = useState('')
     const[time, setTime] = useState('')
     const[nomeTime, setNomeTime] = useState('')
-    const[corTime, setCorTime] = useState('')
+    const[corTime, setCorTime] = useState('#000000')
 
     const aoSalvar = (evento) =>{    
         evento.preventDefault() //Tira os comportamentos padrões do navegador(nesse caso não recarrega a pagina ao clicar no botão)
@@ -30,8 +30,6 @@ function Formulario({aoColaboradorCadastrado, times, cadastrarTime}){
             setNome(''),
             setTime('')
     }
-
-    const [esconder, setEsconder] = useState('')
 
     return(
         <>
@@ -94,7 +92,6 @@ function Formulario({aoColaboradorCadastrado, times, cadastrarTime}){
                 </Botao>
             </form>
         </section>
-        <img src="public/imagens/Botão add-01 1.png" alt="" onClick={setEsconder}/>
         </>
     )
 }
