@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import Rodape from './Componentes/Rodape'
 import PaginaPadrao from './Componentes/PaginaPadrao'
 import Post from './paginas/Post'
+import Erro from './paginas/Erro'
+
 
 function AppRoutes() {
   return (
@@ -41,7 +43,7 @@ function AppRoutes() {
         </Route>
       */}
 
-        <Route path='*' element={'Página não encontrada'}/> {/* o path='*' é o elemento coringa para urls nao encontradas */}  
+        <Route path='*' element={<Erro/>}/> {/* o path='*' é o elemento coringa para urls nao encontradas */}  
       </Routes>
       <Rodape/>
     </BrowserRouter>
