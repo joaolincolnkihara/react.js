@@ -20,8 +20,8 @@ function AppRoutes() {
         <Route path='/' element={<PaginaPadrao/>}>
           <Route path='/' element={<Inicio/>}/>
           <Route path='/sobremim' element={<SobreMim/>}/>
-          <Route path='posts/:id' element={<Post/>}/>
         </Route>
+        <Route path='posts/:id' element={<Post/>}/>
       {/* 
       
         Na rota '/', a estruturaa ser renderizada é:

@@ -1,8 +1,9 @@
-import { useParams } from "react-router"
+import { Route, Routes, useParams } from "react-router"
 import posts from '../../json/posts.json'
 import PostModelo from "../../Componentes/PostModelo"
 import './post.css'
 import Erro from "../Erro"
+import PaginaPadrao from "../../Componentes/PaginaPadrao"
 
 function Post(){
 
@@ -22,15 +23,23 @@ function Post(){
     // o .find recebe uma função q sera executada para cada um dos elementos de json/posts.json, onde deve ser retornado com valor true ou false, sendo o valor true retornara o elemento
 
     return(
-        <PostModelo
-            fotoCapa={`../assets/posts/${post.id}/capa.png`}
-            titulo={post.titulo}
-        >   
-            <div className="post-markdown-container">
-                {post.texto}
-            </div>
-            {/* o Texto de posts.json foi escrita em markdown */}
-        </PostModelo>
+        <Routes>
+            <Route path="*" element={<PaginaPadrao/>}>
+                  <Route index element={
+                        <PostModelo
+                        fotoCapa={`../assets/posts/${post.id}/capa.png`}
+                        titulo={post.titulo}
+                    >   
+                        <div className="post-markdown-container">
+                            {post.texto}
+                        </div>
+                        {/* o Texto de posts.json foi escrita em markdown */}
+                        </PostModelo> }
+                />
+            </Route>
+            
+        </Routes>
+        
     )
 }
 
