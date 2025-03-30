@@ -21,7 +21,7 @@ function SobreMim(){
             />
 
             <p className={styles.paragrafo}>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate eligendi voluptates magni! Earum modi tempora nemo atque! Atque quia, maxime obcaecati, quasi dolorem voluptate laborum a debitis ipsum, facilis sint.
+                Sou um jovem de 18 anos que esta engreçando agora no desevolvimento web
             </p>
             <p className={styles.paragrafo}>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate eligendi voluptates magni! Earum modi tempora nemo atque! Atque quia, maxime obcaecati, quasi dolorem voluptate laborum a debitis ipsum, facilis sint. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eum illum quo nam iure commodi praesentium illo voluptatem dolorem. Aspernatur perferendis perspiciatis optio iste, mollitia rem ipsa atque cum sunt?
